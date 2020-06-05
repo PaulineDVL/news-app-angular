@@ -1,0 +1,26 @@
+
+<div class="container">
+
+
+  <div class="toast toast-primary">
+
+    <app-form-login (formSubmit)="loginUser($event)"></app-form-login>
+  </div>
+  <br>
+  <div class="toast toast-secondary">
+
+    <app-register-form (formSubmit)="registerUser($event)"></app-register-form>
+  </div>
+
+  <app-search-source-form (formSubmit)="getNewsList($event)"></app-search-source-form>
+
+
+  <div class="container cards">
+    <article *ngFor="let newsItem of newsList">
+      <app-item-post [news]="newsItem"></app-item-post>
+    </article>
+
+
+</div>
+
+</div>

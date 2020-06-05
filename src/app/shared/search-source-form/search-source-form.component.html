@@ -1,0 +1,30 @@
+<h2 class="text-primary">Search...</h2>
+<form [formGroup]="formData"
+    (submit)="formSubmit.emit(formData.value)"
+    class="form-horizontal">
+    <div class="form-group">
+      <div class="col-3 col-sm-12">
+        <label class="form-label" for="source">Source</label>
+      </div>
+      <div class="col-9 col-sm-12">
+        <select formControlName="source" class="form-select">
+            <option value="null">Select a source</option>
+            <option *ngFor="let source of newsSources" [value]="source.id">{{ source.name }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-3 col-sm-12">
+        <label class="form-label" for="keyword">Keyword</label>
+      </div>
+      <div class="col-9 col-sm-12">
+        <input formControlName="keyword" type="text"  placeholder="Any keyword ?"  class="form-input" name="keyword">
+      </div>
+    </div>
+    <div class="field">
+        <button type="submit"
+            class="btn btn-primary"
+            [disabled]="!formData.valid">Search</button>
+    </div>
+
+</form>

@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.toast-secondary {
+  background: #e5e5f9!important;
+  border: darken(#e5e5f9, 0.30);
+  color: inherit;
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  article {
+    flex-basis: 45%;
+    margin-bottom: 15px;
+  }
+}

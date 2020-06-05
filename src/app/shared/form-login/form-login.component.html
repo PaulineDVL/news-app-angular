@@ -1,0 +1,35 @@
+
+ <h2>Login</h2>
+<form
+[formGroup]="formData"
+(submit)="formSubmit.emit(formData.value)"
+class="form-horizontal"
+>
+
+<div class="form-group">
+  <div class="col-3 col-sm-12">
+    <label class="form-label" for="email">Email</label>
+  </div>
+  <div class="col-9 col-sm-12">
+    <input formControlName="email" type="email" name="email" required minlength="5" placeholder="Email" class="form-input"
+    >
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-3 col-sm-12">
+    <label class="form-label" for="password">Password</label>
+  </div>
+  <div class="col-9 col-sm-12">
+    <input
+    formControlName="password"
+    type="password" name="password" required minlength="5" placeholder="Password" class="form-input"
+    >
+  </div>
+</div>
+
+<button
+[disabled]="!formData.valid"
+type="submit"
+class="btn btn-primary">OK</button>
+</form>

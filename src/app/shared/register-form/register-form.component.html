@@ -1,0 +1,38 @@
+<h2 class="text-primary h2">Register</h2>
+<form [formGroup]="formData" (submit)="formSubmit.emit(formData.value)" class="form-horizontal">
+  <div class="form-group">
+    <div class="col-3 col-sm-12">
+      <label class="form-label" for="firstName">First Name</label>
+    </div>
+    <div class="col-9 col-sm-12">
+      <input formControlName="firstname" type="text" name="firstName" placeholder="First name" class="form-input">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-3 col-sm-12">
+      <label class="form-label" for="lastname">Last Name</label>
+    </div>
+    <div class="col-9 col-sm-12">
+      <input formControlName="lastname"  type="text"    name="lastName"    placeholder="Last name"    class="form-input">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-3 col-sm-12">
+      <label class="form-label" for="email">Email</label>
+    </div>
+    <div class="col-9 col-sm-12">
+      <input formControlName="email"    type="email"    name="email"    placeholder="Email"    class="form-input">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-3 col-sm-12">
+      <label class="form-label" for="password">Password</label>
+    </div>
+    <div class="col-9 col-sm-12">
+      <input formControlName="password" type="password" name="password" placeholder="Password" class="form-input">
+    </div>
+  </div>
+
+  <button  type="submit"  class="btn btn-primary"  [disabled]="!formData.valid">Inscription</button>
+</form>

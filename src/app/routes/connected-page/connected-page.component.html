@@ -1,0 +1,19 @@
+<!-- <article *ngFor="let item of postCollection">
+<app-item-post
+[post]="item"
+></app-item-post>
+</article> -->
+<div class="container">
+  <div class="toast toast-secondary">
+    <app-search-source-form (formSubmit)="getNewsList($event)"></app-search-source-form>
+  </div>
+<br>
+</div>
+
+  <div class="container cards">
+    <article *ngFor="let newsItem of newsList">
+      <app-item-post [news]="newsItem"></app-item-post>
+    </article>
+
+
+</div>
